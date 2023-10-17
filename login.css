@@ -66,7 +66,7 @@ input{
     margin: 8px 15px;
     width: 100%;
     border-radius: 5px;
-    border: none;
+    border: 1px solid #181818;
     outline: none;
 }
 
@@ -84,8 +84,10 @@ button{
     font-weight: bold;
     padding: 12px 55px;
     margin: 20px;
+    height: 50px;
+    width: 200px;
     border-radius: 20px;
-    border: 1px solid #E9B824;
+    border: 1px solid #181818;
     outline: none;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -192,7 +194,7 @@ button:active{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid #ccc;
+    border: 2px solid #181818;
     border-radius: 50%;
 }
 
@@ -200,6 +202,18 @@ button:active{
     font-size: 24px;
 }
 
+.social-container a:hover {
+    background-color: transparent;
+}
 
+.social-container a.social-facebook:hover {
+    background-color: #98E4FF; 
+}
 
+.social-container a.social-google:hover {
+    background-color: #F99417;
+}
 
+.social-container a.social-github:hover {
+    background-color: #4D4C7D;
+}
