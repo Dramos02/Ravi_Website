@@ -74,6 +74,17 @@ footer {
     width: 100%;
 }
 
+.zoom {
+    transition: transform .5s;
+    margin: 0 auto;
+}
+
+.zoom:hover {
+    -ms-transform: scale(2); /* IE 9 */
+    -webkit-transform: scale(2); /* Safari 3-8 */
+    transform: scale(2); 
+}
+
 .slider {
     overflow: hidden;
     position: fixed;
@@ -81,7 +92,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1;
+    z-index: -1
 }
 
 .slider figure {
@@ -93,10 +104,18 @@ footer {
 }
 
 .slider figure img {
-    width: 20%;
+    width: auto;
     float: left;
-    filter: brightness(0.5);
+    filter: brightness(0.5)
+    
 }
+
+#background-image {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
 
 @keyframes slider {
     0% {
@@ -120,4 +139,49 @@ footer {
     90% {
         left: -300%;
     }
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header {
+        /* Adjust header styles for tablets and smaller screens */
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu, .login-signup {
+        display: block;
+        text-align: center;
+    }
+    .menu a, .login-signup a {
+        display: block;
+        margin: 10px 0;
+    }
+    .logo {
+        padding: 10px;
+        text-align: center;
+    }
+    .slider figure img {
+        width: 50%;
+    }
+    h1 {
+        font-size: 40px;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        /* Adjust header styles for phones and smaller screens */
+        padding: 5px 0;
+    }
+    .menu a, .login-signup a {
+        font-size: 16px;
+    }
+    .quote {
+        font-size: 16px;
+    }
+}
+
+* {
+    transition: all 0.5s ease-in-out;
 }
