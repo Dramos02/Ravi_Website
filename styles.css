@@ -1,14 +1,12 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #272829;
-    opacity: 0.5;
     font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: #0F0F0F;
-    color: #E9B824;
+    background-color: #181818;
+    color: #E1B847;
     padding: 15px 0;
     text-align: center;
     display: flex;
@@ -49,7 +47,7 @@ header::before {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 3px solid #E9B824;
+    border: 3px solid #E1B847;
 }
 
 
@@ -60,7 +58,7 @@ header::before {
 .menu img {
     width: 40px;
     height: 40px;
-    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(335deg) brightness(94%) contrast(87%);
+    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
 }
 
 .menu a {
@@ -74,13 +72,13 @@ header::before {
 .menu a img {
     width: 100%;
     height: 100%;
-    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(335deg) brightness(100%) contrast(87%);
+    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
     transition: filter 0.5s;
 }
 
 .menu a {
     text-decoration: none;
-    color: #E9B824;
+    color: #E1B847;
     margin: 0 20px;
 }
 
@@ -91,34 +89,43 @@ header::before {
 .login-signup img{
     width: 50px;
     height: 50px;
-    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(335deg) brightness(94%) contrast(87%);
+    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
     padding-right: 25px;
     padding-left: 25px;
 }
 
-h1 {
-    text-align: center;
-    font-size: 130px;
-    margin-top: 200px;
-    font-family: 'Nanum Myeongjo', serif;
-    color: #EBE76C;
+h1.custom-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://i.imgur.com/PwPXsve.jpg") no-repeat center;
+    background-size: contain;
+    width: 100%;
+    height: 300px;
+    margin-top: 150px;
 }
+
 
 .quote {
     text-align: center;
-    font-size: 50px;
-    color: #EBE76C;
-    font-family: 'Caveat', cursive;
+    font-size: 40px;
+    color: #E1B847;
+    font-family: 'Raleway', sans-serif;
 }
 
 footer {
     background-color: #0F0F0F;
-    color: #E9B824;
+    color: #E1B847;
     text-align: center;
     padding: 1px 0;
     position: absolute;
     bottom: 0;
     width: 100%;
+}
+
+footer a{
+    color: #E1B847;
+    text-decoration: none;
 }
 
 footer::before {
@@ -168,7 +175,7 @@ p a {
 .slider figure img {
     width: auto;
     float: left;
-    filter: brightness(0.5)
+    filter: brightness(0.2)
     
 }
 
@@ -233,7 +240,6 @@ p a {
 
 @media (max-width: 480px) {
     header {
-        /* Adjust header styles for phones and smaller screens */
         padding: 5px 0;
     }
     .menu a, .login-signup a {
