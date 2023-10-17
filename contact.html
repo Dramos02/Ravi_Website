@@ -1,93 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background: url('https://i.imgur.com/tgkbZ50.jpeg') no-repeat right center fixed;
-            background-size: cover;
-            animation: slide 10s linear infinite;
-            margin: 0;
-        }
+    <link rel="icon" href="https://i.imgur.com/nMdo4LG.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 
-        @keyframes slide {
-            0% {
-                background-position: right center;
-            }
-            100% {
-                background-position: left center;
-            }
-        }
-
-        .header {
-            background-color: #393E46;
-            color: #fff;
-            padding: 5px 0;
-            text-align: center;
-        }
-
-        .header .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .header .icons {
-            font-size: 18px;
-        }
-		
-		.footer {
-            background-color: #E1B847;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-        }
-
-        .contact-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 80vh;
-        }
-
-        .box {
-            background-color: rgba(255, 255, 255, 0.8);
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            padding: 20px;
-            width: 300px;
-            margin: 20px;
-            text-align: center;
-        }
-
-        .box-title {
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        .box-list {
-            list-style: none;
-            padding: 0;
-            text-align: left;
-        }
-
-        .box-list-item {
-            margin: 10px 0;
-        }
-
-        .box-list-item i {
-            margin-right: 10px;
-        }
-    </style>
+    <title>Contact Us - Ravi Modular</title>
 </head>
 <body>
-    <div class="header">
-        <div class="logo" align="left">
+    <header>
+        <div class="logo">
+            <a href="./index.html"><img src="https://i.imgur.com/nMdo4LG.jpg" alt="Company Logo"/></a>
         </div>
-        <div class="icons" alt=login align="right">
-            <i class="fas fa-user"></i> 
+        <div class="menu">
+            <a href="index.html"><img src="https://i.imgur.com/MKtDkr4.jpg" alt="Home" /></a>
+            <a href="#"><img src="https://i.imgur.com/OOChP9p.jpg" alt="About" /></a>
+            <a href="#"><img src="https://i.imgur.com/Lnu2efm.jpg" alt="Images" /></a>
         </div>
-    </div>
+        <div class="login-signup">
+            <a href="./login.html"><img src="https://i.imgur.com/6DZgRGm.jpg" alt="LogUp" /></a>
+        </div>
+    </header>
+    
+    <h1 class="custom-header">Contact Us</h1>
+    <p class="quote">Where Function Meets Aesthetic Harmony in Every Architectural Space</p>
 
     <div class="contact-container">
         <div class="box">
@@ -108,8 +50,9 @@
             </ul>
         </div>
     </div>
-	<div class="footer">
-        © KOLEHIYO EST. 2023 | Visit RAVI MODULAR
-    </div>
+
+    <footer>
+        <p><i class="fas fa-copyright"></i> KOLEHIYO EST. 2023 <a href="https://www.facebook.com/ravimodularcabinet" target="_blank" id="profile-link" class="facebookicon">Visit Ravi Modular</a></p>
+    </footer>
 </body>
 </html>
