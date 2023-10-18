@@ -82,6 +82,16 @@ header::before {
     margin: 0 20px;
 }
 
+.menu a {
+    position: relative;
+    transition: filter 0.5s, transform 0.5s;
+}
+
+.menu a:hover {
+    transform: translateX(10px);
+    transition: filter 0.5s, transform 0.5s;
+}
+
 .login-signup {
     display: inline-block;
 }
@@ -92,6 +102,11 @@ header::before {
     filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
     padding-right: 25px;
     padding-left: 25px;
+}
+
+.login-signup img:hover{
+    transform: translateX(-10px);
+    transition: filter 0.5s, transform 0.5s;
 }
 
 h1.custom-header {
@@ -210,10 +225,8 @@ p a {
     }
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     header {
-        /* Adjust header styles for tablets and smaller screens */
         flex-direction: column;
         align-items: center;
     }
