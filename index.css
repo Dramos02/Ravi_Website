@@ -1,9 +1,36 @@
+/* BODY */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /*SCROLLBAR SETTINGS*/
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: transparent transparent; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    scrollbar-width: none; /* Hide scrollbar in Chrome, Safari, and newer Edge */
+    overflow: -moz-scrollbars-none; /* Hide scrollbar in Firefox */
 }
 
+body::-webkit-scrollbar {
+    width: 5px;
+    background: #181818;
+}
+  
+body::-webkit-scrollbar-thumb {
+    background: #E1B847;
+    border-radius: 0px;
+}
+  
+body::-webkit-scrollbar-button {
+    display: none;
+}
+/* END OF BODY */
+
+/* HEADER */
 header {
     background-color: #181818;
     color: #E1B847;
@@ -18,7 +45,7 @@ header {
 header::before {
     content: "";
     position: absolute;
-    bottom: 0;
+    bottom: 0;      
     left: 0;
     right: 0;
     height: 10px;
@@ -36,7 +63,9 @@ header::before {
         background-position: -100% 0;
     }
 }
+/* END OF HEADER */
 
+/* LOGO (LEFT SIDE) */
 .logo {
     display: inline-block;
     padding-left: 15px;
@@ -49,8 +78,9 @@ header::before {
     border-radius: 50%;
     border: 3px solid #E1B847;
 }
+/* END OF LOGO (LEFT SIDE) */
 
-
+/* BUTTON (CENTER) */
 .menu {
     display: inline-block;
 }
@@ -91,12 +121,14 @@ header::before {
     transform: translateX(10px);
     transition: filter 0.5s, transform 0.5s;
 }
+/* END OF LOGO (LEFT SIDE) */
 
-.login-signup {
+/* BUTTON (RIGHT SIDE) */
+.appointment {
     display: inline-block;
 }
 
-.login-signup img{
+.appointment img{
     width: 50px;
     height: 50px;
     filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
@@ -104,11 +136,13 @@ header::before {
     padding-left: 25px;
 }
 
-.login-signup img:hover{
+.appointment img:hover{
     transform: translateX(-10px);
     transition: filter 0.5s, transform 0.5s;
 }
+/* END OF BUTTON (RIGHT SIDE) */
 
+/* TITLE HEADER */
 h1.custom-header {
     display: flex;
     justify-content: center;
@@ -119,15 +153,18 @@ h1.custom-header {
     height: 300px;
     margin-top: 150px;
 }
+/* END TITLE HEADER */
 
-
+/* TITLE QUOTE HEADER */
 .quote {
     text-align: center;
     font-size: 40px;
     color: #E1B847;
     font-family: 'Raleway', sans-serif;
 }
+/* END OF TITLE QUOTE HEADER */
 
+/* FOOTER */
 footer {
     background-color: #0F0F0F;
     color: #E1B847;
@@ -153,7 +190,7 @@ footer::before {
     background: linear-gradient(to left, #FFCD4B, #E9B824, #EE9322, #D83F31, #C70039, #F94C10, #900C3F, #F8DE22);
     background-size: 200% 100%;
     background-position: 100% 0;
-    animation: footerBorderAnimation 4s linear infinite;
+    animation: footerBorderAnimation 10s linear infinite;
 }
 
 @keyframes footerBorderAnimation {
@@ -164,11 +201,9 @@ footer::before {
         background-position: -100% 0;
     }
 }
+/* END OF FOOTER */
 
-p a {
-    margin-right: 15px; 
-}
-
+/* SLIDER BACKGROUND */
 .slider {
     overflow: hidden;
     position: fixed;
@@ -224,19 +259,19 @@ p a {
         left: -300%;
     }
 }
+/* END OF SLIDER BACKGROUND */
 
-
-
+/* INTERACTIVE */
 @media (max-width: 768px) {
     header {
         flex-direction: column;
         align-items: center;
     }
-    .menu, .login-signup {
+    .menu, .appointment {
         display: block;
         text-align: center;
     }
-    .menu a, .login-signup a {
+    .menu a, .appointment a {
         display: block;
         margin: 10px 0;
     }
@@ -257,7 +292,7 @@ p a {
     header {
         padding: 5px 0;
     }
-    .menu a, .login-signup a {
+    .menu a, .appointment a {
         font-size: 16px;
     }
     .quote {
@@ -268,3 +303,4 @@ p a {
 * {
     transition: all 0.5s ease-in-out;
 }
+/* END OF INTERACTIVE */
