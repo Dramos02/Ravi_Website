@@ -34,18 +34,20 @@ body::-webkit-scrollbar-button {
 header {
     background-color: #181818;
     color: #E1B847;
-    padding: 15px 0;
+    padding: 15px 0px;
     text-align: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 header::before {
     content: "";
     position: absolute;
-    bottom: 0;      
+    bottom: 0;
     left: 0;
     right: 0;
     height: 10px;
@@ -54,6 +56,7 @@ header::before {
     background-position: 100% 0;
     animation: borderAnimation 5s linear infinite;
 }
+
 
 @keyframes borderAnimation {
     0% {
@@ -141,6 +144,31 @@ header::before {
     transition: filter 0.5s, transform 0.5s;
 }
 /* END OF BUTTON (RIGHT SIDE) */
+
+
+/* ---------- Hamburger Icon Start [ kurut0 ] ---------- */
+
+.hamburg-ico {
+    display: none;
+}
+
+.hamburg-ico img {
+    width: 50px;
+    height: 50px;
+    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.navDropdown{
+    display:none;
+}
+    
+.navOptions {
+    display:none;
+}
+
+/* ---------- Hamburger Icon End [ kurut0 ] ---------- */
 
 /* TITLE HEADER */
 h1.custom-header {
@@ -261,30 +289,65 @@ footer::before {
 }
 /* END OF SLIDER BACKGROUND */
 
-/* INTERACTIVE */
+
+/* ---------- Media Query Start [ kurut0 ] ---------- */
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
+    header::before {
+        background:none;
     }
+
     .menu, .appointment {
-        display: block;
-        text-align: center;
+        display: none;
     }
-    .menu a, .appointment a {
-        display: block;
-        margin: 10px 0;
+
+    .hamburg-ico {
+        border:none;
+        display: inline-block;
+        background-color:transparent;
     }
-    .logo {
-        padding: 10px;
-        text-align: center;
+
+    .relativeDropdown {
+        display:block;
+        padding:0;
     }
-    .slider figure img {
-        width: 50%;
+    
+    .navDropdown{
+        display:flex;
+        flex-direction:row;
+        justify-content:center;
+        align-items:center;
+        position:absolute;
+        width:100%;
+        background-color: #1A1A1A;
+        max-height:0;
+        transition: max-height 1s ease-in-out;
     }
-    h1 {
-        font-size: 40px;
-        margin-top: 100px;
+
+    .navDropdown::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background: linear-gradient(to right, #FFCD4B, #E9B824, #EE9322, #D83F31, #C70039, #F94C10, #900C3F, #F8DE22);
+        background-size: 200% 100%;
+        background-position: 100% 0;
+        animation: borderAnimation 5s linear infinite;
+    }
+    
+    .navOptions {
+        display:block;
+        text-decoration:none;
+        text-align:center;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out;
+    }
+    
+    .navOptions img {
+        max-height: 0;
+        filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+        padding: 25px;
     }
 }
 
@@ -292,7 +355,7 @@ footer::before {
     header {
         padding: 5px 0;
     }
-    .menu a, .appointment a {
+    .menu a, .login-signup a {
         font-size: 16px;
     }
     .quote {
@@ -303,4 +366,5 @@ footer::before {
 * {
     transition: all 0.5s ease-in-out;
 }
-/* END OF INTERACTIVE */
+
+/* ---------- Media Query End [ kurut0 ] ---------- */
