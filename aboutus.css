@@ -1,0 +1,324 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #181818;
+    color: #E1B847;
+    padding: 15px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    bottom: 0;      
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(to right, #FFCD4B, #E9B824, #EE9322, #D83F31, #C70039, #F94C10, #900C3F, #F8DE22);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: borderAnimation 5s linear infinite;
+}
+
+@keyframes borderAnimation {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+.logo {
+    display: inline-block;
+    padding-left: 15px;
+    padding-bottom: 5px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 3px solid #E1B847;
+}
+
+
+.menu {
+    display: inline-block;
+}
+
+.menu img {
+    width: 40px;
+    height: 40px;
+    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+}
+
+.menu a {
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    margin: 10 20px;
+}
+
+.menu a img {
+    width: 100%;
+    height: 100%;
+    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+    transition: filter 0.5s;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #E1B847;
+    margin: 0 20px;
+}
+
+.menu a {
+    position: relative;
+    transition: filter 0.5s, transform 0.5s;
+}
+
+.menu a:hover {
+    transform: translateX(10px);
+    transition: filter 0.5s, transform 0.5s;
+}
+
+.appointment {
+    display: inline-block;
+}
+
+.appointment img{
+    width: 50px;
+    height: 50px;
+    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.appointment img:hover{
+    transform: translateX(-10px);
+    transition: filter 0.5s, transform 0.5s;
+}
+
+h1.custom-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("https://i.imgur.com/PwPXsve.jpg") no-repeat center;
+    background-size: contain;
+    width: 100%;
+    height: 300px;
+    padding-left: 100px;
+    
+}
+
+.quote {
+    text-align: justify;
+    font-size: 20px;
+    color: #E1B847;
+    margin-left: 100px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+}
+
+/* Existing CSS code remains the same */
+
+.column img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+    border: 5px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(to right, #FFCD4B, #E9B824, #EE9322, #D83F31, #C70039, #F94C10, #900C3F, #F8DE22) 1;
+    transition: transform 0.5s, border-image 0.5s;
+}
+
+.column img:hover {
+    transform: scale(1.1);
+    border-image: linear-gradient(to left, #FFCD4B, #E9B824, #EE9322, #D83F31, #C70039, #F94C10, #900C3F, #F8DE22) 1;
+}
+
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    .column {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 10px;
+    }
+    .column {
+        text-align: center;
+    }
+    .quote {
+        font-size: 16px;
+    }
+}
+
+
+footer {
+    background-color: #0F0F0F;
+    color: #E1B847;
+    text-align: center;
+    padding: 1px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a{
+    color: #E1B847;
+    text-decoration: none;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(to left, #FFCD4B, #E9B824, #EE9322, #D83F31, #C70039, #F94C10, #900C3F, #F8DE22);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: footerBorderAnimation 4s linear infinite;
+}
+
+@keyframes footerBorderAnimation {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+p a {
+    margin-right: 15px; 
+}
+
+.slider {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1
+}
+
+.slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+}
+
+.slider figure img {
+    width: auto;
+    float: left;
+    filter: brightness(0.2)
+    
+}
+
+#background-image {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+
+@keyframes slider {
+    0% {
+        left: 0;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    80% {
+        left: -300%;
+    }
+    90% {
+        left: -300%;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu, .login-signup {
+        display: block;
+        text-align: center;
+    }
+    .menu a, .login-signup a {
+        display: block;
+        margin: 10px 0;
+    }
+    .logo {
+        padding: 10px;
+        text-align: center;
+    }
+    .slider figure img {
+        width: 50%;
+    }
+    h1 {
+        font-size: 40px;
+        margin-top: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 5px 0;
+    }
+    .menu a, .login-signup a {
+        font-size: 16px;
+    }
+    .quote {
+        font-size: 16px;
+    }
+}
+
+* {
+    transition: all 0.5s ease-in-out;
+}
