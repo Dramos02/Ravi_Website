@@ -5,27 +5,6 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
-
-    /*SCROLLBAR SETTINGS*/
-    scrollbar-width: thin; /* Firefox */
-    scrollbar-color: transparent transparent; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
-    scrollbar-width: none; /* Hide scrollbar in Chrome, Safari, and newer Edge */
-    overflow: -moz-scrollbars-none; /* Hide scrollbar in Firefox */
-}
-
-body::-webkit-scrollbar {
-    width: 5px;
-    background: #181818;
-}
-  
-body::-webkit-scrollbar-thumb {
-    background: #E1B847;
-    border-radius: 0px;
-}
-  
-body::-webkit-scrollbar-button {
-    display: none;
 }
 /* END OF BODY */
 
@@ -130,7 +109,7 @@ header::before {
     display: inline-block;
 }
 
-.appointment img{
+.appointment img {
     width: 50px;
     height: 50px;
     filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
@@ -138,36 +117,11 @@ header::before {
     padding-left: 25px;
 }
 
-.appointment img:hover{
+.appointment img:hover {
     transform: translateX(-10px);
     transition: filter 0.5s, transform 0.5s;
 }
 /* END OF BUTTON (RIGHT SIDE) */
-
-
-/* ---------- Hamburger Icon Start [ kurut0 ] ---------- */
-
-.hamburg-ico {
-    display: none;
-}
-
-.hamburg-ico img {
-    width: 50px;
-    height: 50px;
-    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
-    padding-right: 25px;
-    padding-left: 25px;
-}
-
-.navDropdown{
-    display:none;
-}
-    
-.navOptions {
-    display:none;
-}
-
-/* ---------- Hamburger Icon End [ kurut0 ] ---------- */
 
 /* TITLE HEADER */
 h1.custom-header {
@@ -238,7 +192,7 @@ footer::before {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: -1
+    z-index: -1;
 }
 
 .slider figure {
@@ -252,8 +206,7 @@ footer::before {
 .slider figure img {
     width: auto;
     float: left;
-    filter: brightness(0.2)
-    
+    filter: brightness(0.2);
 }
 
 #background-image {
@@ -261,38 +214,42 @@ footer::before {
     background-position: 50% 50%;
     background-size: cover;
 }
-
-
-@keyframes slider {
-    0% {
-        left: 0;
-    }
-    25% {
-        left: -100%;
-    }
-    45% {
-        left: -100%;
-    }
-    50% {
-        left: -200%;
-    }
-    70% {
-        left: -200%;
-    }
-    80% {
-        left: -300%;
-    }
-    90% {
-        left: -300%;
-    }
-}
 /* END OF SLIDER BACKGROUND */
+
+
+/* ---------- Hamburger Icon Start [ kurut0 ] ---------- */
+
+.hamburg-ico {
+    display: none;
+}
+
+.hamburg-ico img {
+    width: 50px;
+    height: 50px;
+    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.navDropdown{
+    display:none;
+}
+    
+.navOptions {
+    display:none;
+}
+
+/* ---------- Hamburger Icon End [ kurut0 ] ---------- */
 
 
 /* ---------- Media Query Start [ kurut0 ] ---------- */
 @media (max-width: 768px) {
     header::before {
         background:none;
+    }
+
+    .slider figure {
+        animation: 50s slider infinite; /* Slower animation for mobile screens */
     }
 
     .menu, .appointment {
@@ -346,19 +303,31 @@ footer::before {
     .navOptions img {
         max-height: 0;
         filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
-        padding: 25px;
+        padding: 15px;
     }
-}
 
-@media (max-width: 480px) {
-    header {
-        padding: 5px 0;
-    }
-    .menu a, .login-signup a {
-        font-size: 16px;
-    }
-    .quote {
-        font-size: 16px;
+    @keyframes slider {
+        0% {
+            left: 0;
+        }
+        25% {
+            left: -100%;
+        }
+        45% {
+            left: -130%;
+        }
+        50% {
+            left: -150%;
+        }
+        70% {
+            left: -170%;
+        }
+        80% {
+            left: -200%;
+        }
+        90% {
+            left: -200%;
+        }
     }
 }
 
