@@ -193,7 +193,15 @@ header::before {
     margin-right: 30px;
 }
 
- 
+.contact-icon p{
+    position: relative;
+    transition: filter 0.5s, transform 0.5s;
+}
+
+.contact-icon p:hover{
+    transform: translateX(10px);
+    transition: filter 0.5s, transform 0.5s;
+}
 
 /* FOOTER */
 footer {
