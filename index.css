@@ -10,19 +10,27 @@ body {
 
 /* HEADER */
 header {
-    background-color: #181818;
-    color: #E1B847;
-    padding: 15px 0px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     position: sticky;
+    display:block;
     top: 0;
-    z-index: 100;
+    height: 75px;
 }
 
-header::before {
+.headerContent {
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height:100%;
+  width:100%;
+  background-color: #181818;
+  z-index: 100;
+  position:absolute;
+  box-shadow:none;
+  transition: box-shadow 0.3s ease-in-out
+}
+
+.headerContent::before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -123,25 +131,34 @@ header::before {
 }
 /* END OF BUTTON (RIGHT SIDE) */
 
+.homeTitle {
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  width: 70%;
+  height:80vh;
+  margin:auto;
+}
+
 /* TITLE HEADER */
-h1.custom-header {
+.custom-header{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url("https://i.imgur.com/PwPXsve.jpg") no-repeat center;
-    background-size: contain;
-    width: 100%;
-    height: 300px;
-    margin-top: 150px;
+    max-width:40vw;
+    min-width:300px;
 }
 /* END TITLE HEADER */
+
 
 /* TITLE QUOTE HEADER */
 .quote {
     text-align: center;
-    font-size: 40px;
+    margin:15px;
     color: #E1B847;
     font-family: 'Raleway', sans-serif;
+    font-size:2.5vw;
 }
 /* END OF TITLE QUOTE HEADER */
 
@@ -159,6 +176,7 @@ footer {
 footer a{
     color: #E1B847;
     text-decoration: none;
+    bottom:0;
 }
 
 footer::before {
@@ -224,8 +242,7 @@ footer::before {
 }
 
 .hamburg-ico img {
-    width: 50px;
-    height: 50px;
+    height: 40px;
     filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
     padding-right: 25px;
     padding-left: 25px;
@@ -244,7 +261,11 @@ footer::before {
 
 /* ---------- Media Query Start [ kurut0 ] ---------- */
 @media (max-width: 768px) {
-    header::before {
+    .quote {
+      font-size:1.5rem;
+    }
+
+    .headerContent::before {
         background:none;
     }
 
@@ -275,8 +296,10 @@ footer::before {
         position:absolute;
         width:100%;
         background-color: #1A1A1A;
-        max-height:0;
-        transition: max-height 1s ease-in-out;
+        top:10px;
+        max-height:75px;
+        z-index:-5;
+        transition: top 0.3s ease-in-out;
     }
 
     .navDropdown::before {
@@ -296,14 +319,12 @@ footer::before {
         display:block;
         text-decoration:none;
         text-align:center;
-        max-height: 0;
-        transition: max-height 0.3s ease-in-out;
     }
     
     .navOptions img {
-        max-height: 0;
-        filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
-        padding: 15px;
+      max-height: 40px;
+      filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+      padding: 15px;
     }
 
     @keyframes slider {

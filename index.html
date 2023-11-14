@@ -18,52 +18,56 @@
     <script src="script.js"></script>
 
     <header>
+      <div class="headerContent">
         <!--LOGO OF THE WEBPAGE (LEFT SIDE)-->
         <div class="logo">
-            <a href="./index.html"><img src="https://i.imgur.com/nMdo4LG.jpg" alt="Logo"/></a>
+          <a href="./index.html"><img src="https://i.imgur.com/nMdo4LG.jpg" alt="Logo"/></a>
         </div>
         <!--BUTTON OF THE WEBPAGE (CENTER)-->
         <div class="menu">
-            <a href="index.html"><img src="https://i.imgur.com/MKtDkr4.jpg" alt="Home" title="Home"/></a>
-            <a href="aboutus.html"><img src="https://i.imgur.com/OOChP9p.jpg" alt="About" title="About Us"/></a>
-            <a href="contactus.html"><img src="https://i.imgur.com/IfA3jkv.jpg" alt="Contact" title="Contact Us"/></a>
+          <a href="index.html"><img src="https://i.imgur.com/MKtDkr4.jpg" alt="Home" title="Home"/></a>
+          <a href="aboutus.html"><img src="https://i.imgur.com/OOChP9p.jpg" alt="About" title="About Us"/></a>
+          <a href="contactus.html"><img src="https://i.imgur.com/IfA3jkv.jpg" alt="Contact" title="Contact Us"/></a>
         </div>
         <!--HEAD OF THE WEBPAGE (RIGHT SIDE)-->
         <div class="appointment">
-            <a href="./login.html"><img src="https://i.imgur.com/D4hFlbb.jpg" alt="LogUp"  title="Appointment"/></a>
+          <a href="./login.html"><img src="https://i.imgur.com/D4hFlbb.jpg" alt="LogUp"  title="Appointment"/></a>
         </div>
         <!-- DROPDOWN MENU BUTTONS -->
         <button class="hamburg-ico" id="hamburg-ico" onClick="dropDownFunc()"><img src="https://i.imgur.com/zz1orbo.jpg" alt="Menu" title="Menu"></button>
+      </div>
+      <!-- DROPDOWN MENU -->
+      <div class="relativeDropdown" id="dropdown">
+        <div class="navDropdown">
+          <a class="navOptions" href="./index.html"><img src="https://i.imgur.com/MKtDkr4.jpg" alt="Home" title="Home"/></a>
+          <a class="navOptions" href="./aboutus.html"><img src="https://i.imgur.com/OOChP9p.jpg" alt="About" title="About Us"/></a>
+          <a class="navOptions" href="./contactus.html"><img src="https://i.imgur.com/IfA3jkv.jpg" alt="Contact" title="Contact Us"/></a>
+          <a class="navOptions" href="#"><img src="https://i.imgur.com/D4hFlbb.jpg" alt="Appointment"  title="Book Appointment"/></a>
+        </div>
+      </div>
     </header>
     
-    <!-- DROPDOWN MENU -->
-    <div class="relativeDropdown" id="dropdown">
-        <div class="navDropdown">
-            <a class="navOptions" href="./index.html"><img src="https://i.imgur.com/MKtDkr4.jpg" alt="Home" title="Home"/></a>
-            <a class="navOptions" href="./aboutus.html"><img src="https://i.imgur.com/OOChP9p.jpg" alt="About" title="About Us"/></a>
-            <a class="navOptions" href="#"><img src="https://i.imgur.com/IfA3jkv.jpg" alt="Contact" title="Portfolio"/></a>
-            <a class="navOptions" href="./login.html"><img src="https://i.imgur.com/D4hFlbb.jpg" alt="LogUp"  title="Log In / Sign Up"/></a>
-        </div>
+    
+    <!--TITLE OF THE WEBPAGE-->
+    <div class="homeTitle">
+      <img class="custom-header" src="https://i.imgur.com/q3fiLLR.png"></h1>
+      <p class="quote">Where Function Meets Aesthetic Harmony in Every Architectural Space</p>
     </div>
 
-    <!--TITLE OF THE WEBPAGE-->
-    <h1 class="custom-header"></h1>
-    <p class="quote">Where Function Meets Aesthetic Harmony in Every Architectural Space</p>
+    <!--BACKGROUND OF THE WEBPAGE-->
+    <div class="slider">
+      <figure>
+        <img src="https://i.imgur.com/7jsVmaF.jpg" alt="Slide 1"/>
+        <img src="https://i.imgur.com/OfSohKJ.jpg" alt="Slide 2"/>
+        <img src="https://i.imgur.com/WMIgT70.jpg" alt="Slide 3"/>
+        <img src="https://i.imgur.com/YQXRY46.jpg" alt="Slide 4"/>
+        <img src="https://i.imgur.com/LHtaiM1.jpg" alt="Slide 5"/>
+      </figure>
+    </div>
 
     <!--FOOTER OF THE WEBPAGE-->
     <footer>
-        <p><i class="fa fa-copyright"></i> KOLEHIYO EST. 2023 <a href="https://www.facebook.com/ravimodularcabinet" target="_blank" id="profile-link" class="facebookicon" title="Visit Ravi Modular">Visit Ravi Modular</a></p>
-    </footer>
-    
-    <!--BACKGROUND OF THE WEBPAGE-->
-    <div class="slider">
-        <figure>
-            <img src="https://i.imgur.com/7jsVmaF.jpg" alt="Slide 1"/>
-            <img src="https://i.imgur.com/OfSohKJ.jpg" alt="Slide 2"/>
-            <img src="https://i.imgur.com/WMIgT70.jpg" alt="Slide 3"/>
-            <img src="https://i.imgur.com/YQXRY46.jpg" alt="Slide 4"/>
-            <img src="https://i.imgur.com/LHtaiM1.jpg" alt="Slide 5"/>
-        </figure>
-    </div>
+      <p><i class="fa fa-copyright"></i> KOLEHIYO EST. 2023 <a href="https://www.facebook.com/ravimodularcabinet" target="_blank" id="profile-link" class="facebookicon" title="Visit Ravi Modular">Visit Ravi Modular</a></p>
+  </footer>
 </body>
 </html>
