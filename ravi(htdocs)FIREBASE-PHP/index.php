@@ -40,21 +40,23 @@ $db = new firebaseRDB($databaseURL);
     if (is_array($data)) {
         foreach ($data as $id => $ravi) {
             echo "<tr>
-                <td>{$ravi['initial_name']}</td>
-                <td>{$ravi['initial_contactnumber']}</td>
-                <td>{$ravi['initial_address']}</td>
-                <td>{$ravi['initial_idprofFee']}</td>
-                <td></td>
-                <td>{$ravi['primary_name']}</td>
-                <td>{$ravi['primary_contactnumber']}</td>
-                <td>{$ravi['primary_address']}</td>
-                <td>{$ravi['primary_idprofFee']}</td>
-                <td></td>
-                <td>{$ravi['owner_name']}</td>
-                <td>{$ravi['owner_contactnumber']}</td>
-                <td>{$ravi['owner_address']}</td>
-                <td>{$ravi['owner_idprofFee']}</td>
-                <td></td>
+                <td>{$ravi['initial']['initial_name']}</td>
+                <td>{$ravi['initial']['initial_contactnumber']}</td>
+                <td>{$ravi['initial']['initial_address']}</td>
+                <td>{$ravi['initial']['initial_idprofFee']}</td>
+                <td>{$ravi['initial']['initial_profession']}</td>
+
+                <td>{$ravi['primary']['primary_name']}</td>
+                <td>{$ravi['primary']['primary_contactnumber']}</td>
+                <td>{$ravi['primary']['primary_address']}</td>
+                <td>{$ravi['primary']['primary_idprofFee']}</td>
+                <td>{$ravi['primary']['primary_profession']}</td>
+
+                <td>{$ravi['owner']['owner_name']}</td>
+                <td>{$ravi['owner']['owner_contactnumber']}</td>
+                <td>{$ravi['owner']['owner_address']}</td>
+                <td>{$ravi['owner']['owner_idprofFee']}</td>
+                <td>{$ravi['owner']['owner_profession']}</td>
             </tr>";
         }
     }

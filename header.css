@@ -1,0 +1,213 @@
+/* HEADER */
+header {
+  position: sticky;
+  display: block;
+  top: 0;
+  height: 75px;
+  z-index:100;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #181818;
+  z-index: 100;
+  position: absolute;
+  box-shadow: none;
+  transition: box-shadow 0.3s ease-in-out
+}
+
+.headerContent::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: linear-gradient(to right, #FFCD4B, #E9B824, #EE9322, #D83F31, #C70039, #F94C10, #900C3F, #F8DE22);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: borderAnimation 5s linear infinite;
+}
+
+
+@keyframes borderAnimation {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+/* END OF HEADER */
+
+/* LOGO (LEFT SIDE) */
+.logo {
+  display: inline-block;
+  padding-left: 15px;
+  padding-bottom: 5px;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #E1B847;
+}
+
+/* END OF LOGO (LEFT SIDE) */
+
+/* BUTTON (CENTER) */
+.menu {
+  display: inline-block;
+}
+
+.menu img {
+  width: 40px;
+  height: 40px;
+  filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+}
+
+.menu a {
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 10 20px;
+}
+
+.menu a img {
+  width: 100%;
+  height: 100%;
+  filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+  transition: filter 0.5s;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #E1B847;
+  margin: 0 20px;
+}
+
+.menu a {
+  position: relative;
+  transition: filter 0.5s, transform 0.5s;
+}
+
+.menu a:hover {
+  transform: translateX(10px);
+  transition: filter 0.5s, transform 0.5s;
+}
+
+/* END OF LOGO (LEFT SIDE) */
+
+/* BUTTON (RIGHT SIDE) */
+.appointment {
+  display: inline-block;
+}
+
+.appointment img {
+  width: 50px;
+  height: 50px;
+  filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.appointment img:hover {
+  transform: translateX(-10px);
+  transition: filter 0.5s, transform 0.5s;
+}
+
+/* END OF BUTTON (RIGHT SIDE) */
+
+/* ---------- Hamburger Icon Start [ kurut0 ] ---------- */
+
+.hamburg-ico {
+  display: none;
+}
+
+.hamburg-ico img {
+  height: 40px;
+  filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.navDropdown {
+  display: none;
+}
+
+.navOptions {
+  display: none;
+}
+
+/* ---------- Hamburger Icon End [ kurut0 ] ---------- */
+
+
+@media (max-width: 768px) {
+  .headerContent::before {
+    background: none;
+  }
+
+  .menu,
+  .appointment {
+    display: none;
+  }
+
+  .hamburg-ico {
+    border: none;
+    display: inline-block;
+    background-color: transparent;
+  }
+
+  .relativeDropdown {
+    display: block;
+    padding: 0;
+  }
+
+  .navDropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    background-color: #1A1A1A;
+    top: 10px;
+    max-height: 75px;
+    z-index: -1;
+    transition: top 0.3s ease-in-out;
+  }
+
+  .navDropdown::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(to right, #FFCD4B, #E9B824, #EE9322, #D83F31, #C70039, #F94C10, #900C3F, #F8DE22);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    animation: borderAnimation 5s linear infinite;
+  }
+
+  .navOptions {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .navOptions img {
+    max-height: 40px;
+    filter: invert(93%) sepia(77%) saturate(1122%) hue-rotate(320deg) brightness(94%) contrast(87%);
+    padding: 15px;
+  }
+}

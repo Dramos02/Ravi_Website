@@ -1,0 +1,86 @@
+@import "header.css";
+@import "slider.css";
+@import "footer.css";
+
+:root {}
+
+* {
+  transition: all 0.5s ease-in-out;
+  font-family: Arial, sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: -moz-scrollbars-none;
+}
+
+html,
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  color: #E1B847;
+}
+
+body::-webkit-scrollbar {
+  width: 3px;
+  background: #181818;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #E1B847;
+  border-radius: 0px;
+}
+
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+.bodyFlex {
+  display: flex;
+  flex-flow: column;
+}
+
+.mobileHeaderWrap {
+  display: none;
+}
+
+.headerWrapper {
+  flex: 0 1 auto;
+  position: sticky;
+  top: 0;
+  margin: 0;
+  z-index: 2;
+}
+
+.contentWrapper {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+.footerWrapper {
+  flex: 0 1 auto;
+  margin: 0;
+  z-index: 2;
+}
+
+
+#background-image {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+/* ---------- Media Query Start [ kurut0 ] ---------- */
+@media (max-width: 768px) {
+  .quote {
+    font-size: 1.5rem;
+  }
+}

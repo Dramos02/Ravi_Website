@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+  /* TODO: remove after fixing slider style */
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.slider figure {
+  display: flex;
+  flex-flow: row;
+  position: relative;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+  animation: 20s slider infinite;
+  width:100%;
+}
+
+.slider figure img {
+  flex:0 1 auto;
+  width:auto;
+  float: left;
+  filter: brightness(0.2);
+  margin:0;
+  padding:0;
+}
+
+/* ---------- Media Query Start [ kurut0 ] ---------- */
+@media (max-width: 768px) {
+  .backgroundHolder {
+    animation: 50s slider infinite;
+    /* Slower animation for mobile screens */
+  }
+}
+
+@keyframes slider {
+  0%, 100% {
+    transform: translateX(0%);
+  }
+
+  90% {
+    transform: translateX(-100%);
+  }
+}

@@ -1,0 +1,39 @@
+/* FOOTER */
+footer {
+  background-color: #0F0F0F;
+  color: #E1B847;
+  text-align: center;
+  padding: 1px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a{
+  color: #E1B847;
+  text-decoration: none;
+  bottom:0;
+}
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(to left, #FFCD4B, #E9B824, #EE9322, #D83F31, #C70039, #F94C10, #900C3F, #F8DE22);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: footerBorderAnimation 10s linear infinite;
+}
+
+@keyframes footerBorderAnimation {
+  0% {
+      background-position: 100% 0;
+  }
+  100% {
+      background-position: -100% 0;
+  }
+}
+/* END OF FOOTER */
