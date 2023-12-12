@@ -10,22 +10,29 @@ $db = new firebaseRDB($databaseURL);
 
 <table border="1" width="auto">
     <tr>
-        <td colspan="3">Contact Information:</td>
-        <td colspan="4">Address:</td>
-        <td colspan="2">Budget Range:</td>
+        <td colspan="5">Initial Contact Details:</td> 
+        <td colspan="5">Primary Contact Details:</td>
+        <td colspan="5">Main Owner Details:</td>
     </tr>
     <tr>
-        <td>Full Name:</td>
-        <td>Email Address:</td>
-        <td>Phone Number:</td>
-        <td>Street Address:</td>
-        <td>City:</td>
-        <td>State/Province:</td>
-        <td>ZIP/Postal Code:</td>
-        <td>Minimum Budget:</td>
-        <td>Maximum Budget:</td>
+        <td>Name:</td>
+        <td>Contact Number:</td>
+        <td>Address</td>
+        <td>% ID Prof. Fee or Fixed PF Amount</td>
+        <td>Profession:</td>
+
+        <td>Name:</td>
+        <td>Contact Number:</td>
+        <td>Address</td>
+        <td>% ID Prof. Fee or Fixed PF Amount</td>
+        <td>Profession:</td>
+
+        <td>Name:</td>
+        <td>Contact Number:</td>
+        <td>Address</td>
+        <td>% ID Prof. Fee or Fixed PF Amount</td>
+        <td>Profession:</td>
     </tr>
-  
     <?php
     $data = $db->retrieve("ravi");
     $data = json_decode($data, 1);
@@ -33,17 +40,21 @@ $db = new firebaseRDB($databaseURL);
     if (is_array($data)) {
         foreach ($data as $id => $ravi) {
             echo "<tr>
-                <td>{$ravi['fullname']}</td>
-                <td>{$ravi['email']}</td>
-                <td>{$ravi['contactnumber']}</td>
-                <td>{$ravi['streetaddress']}</td>
-                <td>{$ravi['city']}</td>
-                <td>{$ravi['stateprovince']}</td>
-                <td>{$ravi['postalcode']}</td>
-                <td>{$ravi['minbudget']}</td>
-                <td>{$ravi['maxbudget']}</td>
-                <td><a href='edit.php?id=$id'><button class='edit-btn'> EDIT </button></a></td>
-                <td><a href='delete.php?id=$id'><button class='delete-btn'> DELETE </button></a></td>
+                <td>{$ravi['initial_name']}</td>
+                <td>{$ravi['initial_contactnumber']}</td>
+                <td>{$ravi['initial_address']}</td>
+                <td>{$ravi['initial_idprofFee']}</td>
+                <td></td>
+                <td>{$ravi['primary_name']}</td>
+                <td>{$ravi['primary_contactnumber']}</td>
+                <td>{$ravi['primary_address']}</td>
+                <td>{$ravi['primary_idprofFee']}</td>
+                <td></td>
+                <td>{$ravi['owner_name']}</td>
+                <td>{$ravi['owner_contactnumber']}</td>
+                <td>{$ravi['owner_address']}</td>
+                <td>{$ravi['owner_idprofFee']}</td>
+                <td></td>
             </tr>";
         }
     }

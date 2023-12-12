@@ -6,45 +6,45 @@
     <tr>
         <td>Name</td>
         <td>:</td>
-        <td><input type="text" name="fullname" class="input" placeholder="Full Name"required></td>
-        <td><input type="checkbox" id="projmanager_I" name="projmanager_I" value="projmanager_I">
-            <label for="projmanager_I" class="checkbox-text">PROJ MANAGER</label>
+        <td><input type="text" name="initial_name" class="input" placeholder="Full Name"required></td>
+        <td><input type="checkbox" id="projmanager" name="profession[]"value="projmanager">
+            <label for="projmanager" class="checkbox-text">PROJ MANAGER</label>
         </td>
-        <td><input type="checkbox" id="timekeeper_I" name="timekeeper_I" value="timekeeper_I">
-            <label for="timekeeper_I" class="checkbox-text">TIMEKEEPER</label>
+        <td><input type="checkbox" id="timekeeper" name="timekeeper_I" value="timekeeper">
+            <label for="timekeeper" class="checkbox-text">TIMEKEEPER</label>
         </td>
     </tr>
     <tr>
         <td>Mobile No</td>
         <td>:</td>
-        <td><input type="text" name="contactnumber"  class="input" pattern="09\d{9}" title="Please enter 11 digits start with 09" placeholder="09XXXXXXX" required></td>
-        <td><input type="checkbox" id="projengineer_I" name="projengineer_I" value="projengineer_I">
-            <label for="projengineer_I" class="checkbox-text">PROJ MANAGER</label>
+        <td><input type="text" name="initial_contactnumber"  class="input" pattern="09\d{9}" title="Please enter 11 digits start with 09" placeholder="09XXXXXXX" required></td>
+        <td><input type="checkbox" id="projengineer" name="profession[]" value="projengineer">
+            <label for="projengineer" class="checkbox-text">PROJ ENGINEER</label>
         </td>
-        <td><input type="checkbox" id="foreman_I" name="foreman_I" value="foreman_I">
-            <label for="foreman_I" class="checkbox-text">FOREMAN</label>
+        <td><input type="checkbox" id="initial_foreman" name="profession[]" value="foreman">
+            <label for="foreman" class="checkbox-text">FOREMAN</label>
         </td>
     </tr>
     <tr>
         <td>Address</td>
         <td>:</td>
-        <td><input type="text" name="address" class="input" placeholder="Complete Address"required></td>
-        <td><input type="checkbox" id="architect_I" name="architect_I" value="architect_I">
-            <label for="architect_I" class="checkbox-text">ARCHITECT</label>
+        <td><input type="text" name="initial_address" class="input" placeholder="Complete Address"required></td>
+        <td><input type="checkbox" id="architect" name="profession[]" value="architect">
+            <label for="architect" class="checkbox-text">ARCHITECT</label>
         </td>
-        <td><input type="checkbox" id="int_designer_I" name="int_designer_I" value="int_designer_I">
-            <label for="int_designer_I" class="checkbox-text">INT. DESIGNER</label>
+        <td><input type="checkbox" id="int_designer_I" name="profession[]" value="int_designer">
+            <label for="int_designer" class="checkbox-text">INT. DESIGNER</label>
         </td>
     </tr>
     <tr>
         <td>% ID Prof. Fee or Fixed PF Amount</td>
         <td>:</td>
-        <td><input type="text" name="idprofFee" class="input" placeholder=""required></td>
-        <td><input type="checkbox" id="others_I" name="others_I" value="others_I">
-            <label for="others_I" class="checkbox-text">OTHERS: PLS SPECIFY</label>
+        <td><input type="text" name="initial_idprofFee" class="input" placeholder=""required></td>
+        <td><input type="checkbox" id="others_I" name="profession[]" value="others">
+            <label for="others" class="checkbox-text">OTHERS: PLS SPECIFY</label>
         </td>
         <td>
-        <textarea id="others_field_I" name="others_field_I" rows="1" cols="20"></textarea>
+        <textarea id="others_field" name="others_field" rows="1" cols="20"></textarea>
         </td>
     </tr>
     <tr>
@@ -52,42 +52,42 @@
     <tr>
         <td>Name</td>
         <td>:</td>
-        <td><input type="text" name="fullname" class="input" placeholder="Full Name"required></td>
-        <td><input type="checkbox" id="projmanager_P" name="projmanager_P" value="projmanager_P">
-            <label for="projmanager_P" class="checkbox-text">PROJ MANAGER</label>
+        <td><input type="text" name="primary_name" class="input" placeholder="Full Name"required></td>
+        <td><input type="checkbox" id="projmanager" name="projmanager" value="projmanager">
+            <label for="projmanager" class="checkbox-text">PROJ MANAGER</label>
         </td>
-        <td><input type="checkbox" id="timekeeper_P" name="timekeeper_P" value="timekeeper_P">
-            <label for="timekeeper_P" class="checkbox-text">TIMEKEEPER</label>
+        <td><input type="checkbox" id="timekeeper" name="timekeeper" value="timekeeper">
+            <label for="timekeeper" class="checkbox-text">TIMEKEEPER</label>
         </td>
     </tr>
     <tr>
         <td>Mobile No</td>
         <td>:</td>
-        <td><input type="text" name="contactnumber" class="input" pattern="09\d{9}" title="Please enter 11 digits start with 09" placeholder="09XXXXXXX" required></td>
-        <td><input type="checkbox" id="projengineer_P" name="projengineer" value="projengineer_P">
-            <label for="projengineer_P" class="checkbox-text">PROJ MANAGER</label>
+        <td><input type="text" name="primary_contactnumber" class="input" pattern="09\d{9}" title="Please enter 11 digits start with 09" placeholder="09XXXXXXX" required></td>
+        <td><input type="checkbox" id="projengineer" name="projengineer" value="projengineer">
+            <label for="projengineer" class="checkbox-text">PROJ MANAGER</label>
         </td>
-        <td><input type="checkbox" id="foreman_P" name="foreman_P" value="foreman_P">
-            <label for="foreman_P" class="checkbox-text">FOREMAN</label>
+        <td><input type="checkbox" id="foreman" name="foreman" value="foreman">
+            <label for="foreman" class="checkbox-text">FOREMAN</label>
         </td>
     </tr>
     <tr>
         <td>Address</td>
         <td>:</td>
-        <td><input type="text" name="address" class="input" placeholder="Complete Address"required></td>
-        <td><input type="checkbox" id="architect_P" name="architect_P" value="architect_P">
-            <label for="architect_P" class="checkbox-text">ARCHITECT</label>
+        <td><input type="text" name="primary_address" class="input" placeholder="Complete Address"required></td>
+        <td><input type="checkbox" id="architect_P" name="architect_P" value="architect">
+            <label for="architect" class="checkbox-text">ARCHITECT</label>
         </td>
-        <td><input type="checkbox" id="int_designer_P" name="int_designer_P" value="int_designer_P">
-            <label for="int_designer_P" class="checkbox-text">INT. DESIGNER</label>
+        <td><input type="checkbox" id="int_designer_P" name="int_designer" value="int_designer">
+            <label for="int_designer" class="checkbox-text">INT. DESIGNER</label>
         </td>
     </tr>
     <tr>
         <td>% ID Prof. Fee or Fixed PF Amount</td>
         <td>:</td>
-        <td><input type="text" name="idprofFee" class="input" placeholder=""required></td>
-        <td><input type="checkbox" id="others_P" name="others_P" value="others_P">
-            <label for="others_P" class="checkbox-text">OTHERS: PLS SPECIFY</label>
+        <td><input type="text" name="primary_idprofFee" class="input" placeholder=""required></td>
+        <td><input type="checkbox" id="others" name="others" value="others">
+            <label for="others" class="checkbox-text">OTHERS: PLS SPECIFY</label>
         </td>
         <td>
         <textarea id="others_field_P" name="others_field_P" rows="1" cols="20"></textarea>
@@ -98,42 +98,42 @@
     <tr>
         <td>Name</td>
         <td>:</td>
-        <td><input type="text" name="fullname" class="input" placeholder="Full Name"required></td>
-        <td><input type="checkbox" id="projmanager_M" name="projmanager_M" value="projmanager_M">
-            <label for="projmanager_P" class="checkbox-text">PROJ MANAGER</label>
+        <td><input type="text" name="owner_name" class="input" placeholder="Full Name"required></td>
+        <td><input type="checkbox" id="projmanager" name="projmanager" value="projmanager">
+            <label for="projmanager" class="checkbox-text">PROJ MANAGER</label>
         </td>
-        <td><input type="checkbox" id="timekeeper_M" name="timekeeper_M" value="timekeeper_M">
-            <label for="timekeeper_M" class="checkbox-text">TIMEKEEPER</label>
+        <td><input type="checkbox" id="timekeeper" name="timekeeper_M" value="timekeeper">
+            <label for="timekeeper" class="checkbox-text">TIMEKEEPER</label>
         </td>
     </tr>
     <tr>
         <td>Mobile No</td>
         <td>:</td>
-        <td><input type="text" name="contactnumber" class="input" pattern="09\d{9}" title="Please enter 11 digits start with 09" placeholder="09XXXXXXX" required></td>
-        <td><input type="checkbox" id="projengineer_M" name="projengineer_M" value="projengineer_M">
+        <td><input type="text" name="owner_contactnumber" class="input" pattern="09\d{9}" title="Please enter 11 digits start with 09" placeholder="09XXXXXXX" required></td>
+        <td><input type="checkbox" id="projengineer" name="projengineer" value="projengineer">
             <label for="projengineer_M" class="checkbox-text">PROJ MANAGER</label>
         </td>
-        <td><input type="checkbox" id="foreman_M" name="foreman_M" value="foreman_M">
-            <label for="foreman_M" class="checkbox-text">FOREMAN</label>
+        <td><input type="checkbox" id="foreman" name="foreman" value="foreman">
+            <label for="foreman" class="checkbox-text">FOREMAN</label>
         </td>
     </tr>
     <tr>
         <td>Address</td>
         <td>:</td>
-        <td><input type="text" name="address" class="input" placeholder="Complete Address"required></td>
-        <td><input type="checkbox" id="architect_M" name="architect_M" value="architect_M">
-            <label for="architect_M" class="checkbox-text">ARCHITECT</label>
+        <td><input type="text" name="owner_address" class="input" placeholder="Complete Address"required></td>
+        <td><input type="checkbox" id="architect" name="architect" value="architect">
+            <label for="architect" class="checkbox-text">ARCHITECT</label>
         </td>
-        <td><input type="checkbox" id="int_designer_M" name="int_designer_M" value="int_designer_M">
-            <label for="int_designer_M" class="checkbox-text">INT. DESIGNER</label>
+        <td><input type="checkbox" id="int_designer" name="int_designer" value="int_designer">
+            <label for="int_designer" class="checkbox-text">INT. DESIGNER</label>
         </td>
     </tr>
     <tr>
         <td>% ID Prof. Fee or Fixed PF Amount</td>
         <td>:</td>
-        <td><input type="text" name="idprofFee" class="input" placeholder=""required></td>
-        <td><input type="checkbox" id="others_M" name="others_M" value="others_M">
-            <label for="others_M" class="checkbox-text">OTHERS: PLS SPECIFY</label>
+        <td><input type="text" name="owner_idprofFee" class="input" placeholder=""required></td>
+        <td><input type="checkbox" id="others" name="others" value="others">
+            <label for="others" class="checkbox-text">OTHERS: PLS SPECIFY</label>
         </td>
         <td>
         <textarea id="others_field_M" name="others_field_M" rows="1" cols="20"></textarea>
@@ -263,20 +263,20 @@
     </tr>
     <tr>
         <td>Model/Brand (OTHER APPLIANCES, PLS SPECIFY)</td>
-        <td><input type="text" name="model_brand" class="input" placeholder=""required>
+        <td><input type="text" name="model_brand" class="input" placeholder="">
     </tr>
     <tr>
     <td></td>
-    <td><input type="text" name="width_model_brand" class="input" placeholder=""required>
+    <td><input type="text" name="width_model_brand" class="input" placeholder="">
         <label class="checkbox-text">WIDTH</label></td>
-        <td><input type="text" name="depth_model_brand" class="input" placeholder=""required>
+        <td><input type="text" name="depth_model_brand" class="input" placeholder="">
         <label class="checkbox-text">DEPTH</label></td>
-        <td><input type="text" name="height_model_brand" class="input" placeholder=""required>
+        <td><input type="text" name="height_model_brand" class="input" placeholder="">
         <label class="checkbox-text">HEIGHT</label></td>
     </tr>
     <tr>
         <td>REMARKS:</td>
-        <td><textarea id="remarks" name="remarks" rows="3" cols="50"></textarea></td>
+        <td><textarea id="remarks" name="remarks" rows="3" cols="10"></textarea></td>
     </tr>
     <tr>
     <td>Attachments:</td>
