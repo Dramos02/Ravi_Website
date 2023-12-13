@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
 :root{
-    --yellow:#24f2f9;
+    --yellow:#5d6263;
     --bg-clr: #ef4d61;
     --white: rgb(231, 243, 243);
     --text-primary-clr: #24f2f9;
@@ -44,6 +44,18 @@ body{
     background-position: center;
 }
 
+.about {
+    flex: 1;
+}   
+
+.footerWrapper {
+    text-align: center;
+    padding: 20px;
+    background-color: #222121;
+    color: #eedb5e;
+}
+
+
 table {
     background-color: rgba(230, 219, 126, 0.5);
 }
@@ -63,7 +75,7 @@ section{
     font-size: 4rem;
     padding:1rem;
     border-bottom: .1rem solid #fff4;
-    color:#fff;
+    color:#ffffff;
 }
 
 header{
