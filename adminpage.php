@@ -31,14 +31,7 @@
 
 <section class="about" id="Account_Details">
 <h1 class="heading"> Account <span> Details</span></h1>
-<!-- <div class="row">
-    <div class="info">
-        <h3> <span> Name : </span> <?php echo $user_data['user_name']; ?></h3>
-        <h3> <span> ID_Number: </span> <?php echo $user_data['user_id']; ?></h3>
-        <h3> <span> Phone Number: </span> <?php echo $user_data['phone']; ?></h3>
-        <h3> <span> Email: </span> <?php echo $user_data['user_email']; ?></h3>
-        <h3> <span> Account Balance:</span>₱<?php echo $user_data['balance']; ?></h3>
-  </div> -->
+<?php include('ravi(htdocs)FIREBASE-PHP/index.php');?>
 
 </div>
 
