@@ -36,13 +36,45 @@
     <tr>
       <td>% ID Prof. Fee or Fixed PF Amount</td>
       <td>:</td>
-      <td><input type="text" name="initial_idprofFee" class="input" placeholder="" required></td>
+      <td><input type="text" name="initial_idprofFee" class="input" placeholder="ex. XXX,XXX" required></td>
     </tr>
   </table>
   </td>
 
   <td colspan="2">
-    <?php include('./addPageComponents/initialprofession.php'); ?>
+    <table>
+      <tr>
+        <td><input type="radio" id="projmanager" name="initial" value="p1">
+          <label for="projmanager" class="checkbox-text">PROJ MANAGER</label>
+        </td>
+        <td><input type="radio" id="timekeeper" name="initial" value="p2">
+          <label for="timekeeper" class="checkbox-text">TIMEKEEPER</label>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="radio" id="projengineer" name="initial" value="p3">
+          <label for="projengineer" class="checkbox-text">PROJ ENGINEER</label>
+        </td>
+        <td><input type="radio" id="initial_foreman" name="initial" value="p4">
+          <label for="foreman" class="checkbox-text">FOREMAN</label>
+      </tr>
+      <tr>
+        <td><input type="radio" id="architect" name="initial" value="p5">
+          <label for="architect" class="checkbox-text">ARCHITECT</label>
+        </td>
+        <td><input type="radio" id="int_designer_I" name="initial" value="p6">
+          <label for="int_designer" class="checkbox-text">INT. DESIGNER</label>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="radio" id="others_I" name="initial" value="p7">
+          <label for="others" class="checkbox-text">OTHERS: PLS SPECIFY</label>
+        </td>
+        <td>
+          <input type="text" class="othersField" id="initial_field" name="initial_profession" required>
+        </td>
+      </tr>
+    </table>
   </td>
   </tr>
 
@@ -74,13 +106,45 @@
   <tr>
     <td>% ID Prof. Fee or Fixed PF Amount</td>
     <td>:</td>
-    <td><input type="text" name="primary_idprofFee" class="input" placeholder="" required></td>
+    <td><input type="text" name="primary_idprofFee" class="input" placeholder="ex. XXX,XXX" required></td>
   </tr>
   </table>
   </td>
 
   <td colspan="2">
-    <?php include('./addPageComponents/primaryprofession.php'); ?>
+    <table>
+      <tr>
+        <td><input type="radio" id="projmanager" name="primary" value="p1">
+          <label for="projmanager" class="checkbox-text">PROJ MANAGER</label>
+        </td>
+        <td><input type="radio" id="timekeeper" name="primary" value="p2">
+          <label for="timekeeper" class="checkbox-text">TIMEKEEPER</label>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="radio" id="projengineer" name="primary" value="p3">
+          <label for="projengineer" class="checkbox-text">PROJ ENGINEER</label>
+        </td>
+        <td><input type="radio" id="initial_foreman" name="primary" value="p4">
+          <label for="foreman" class="checkbox-text">FOREMAN</label>
+      </tr>
+      <tr>
+        <td><input type="radio" id="architect" name="primary" value="p5">
+          <label for="architect" class="checkbox-text">ARCHITECT</label>
+        </td>
+        <td><input type="radio" id="int_designer_I" name="primary" value="p6">
+          <label for="int_designer" class="checkbox-text">INT. DESIGNER</label>
+        </td>
+      </tr>
+      <tr>
+        <td><input type="radio" id="others_I" name="primary" value="p7">
+          <label for="others" class="checkbox-text">OTHERS: PLS SPECIFY</label>
+        </td>
+        <td>
+          <input type="text" class="othersField" id="primary_field" name="primary_profession" required>
+        </td>
+      </tr>
+    </table>
   </td>
   </tr>
 
@@ -109,13 +173,45 @@
         <tr>
           <td>% ID Prof. Fee or Fixed PF Amount</td>
           <td>:</td>
-          <td><input type="text" name="owner_idprofFee" class="input" placeholder="" required></td>
+          <td><input type="text" name="owner_idprofFee" class="input" placeholder="ex. XXX,XXX" required></td>
         </tr>
       </table>
     </td>
 
     <td colspan="2">
-      <?php include('./addPageComponents/ownerprofession.php'); ?>
+      <table>
+        <tr>
+          <td><input type="radio" id="projmanager" name="owner" value="p1">
+            <label for="projmanager" class="checkbox-text">PROJ MANAGER</label>
+          </td>
+          <td><input type="radio" id="timekeeper" name="owner" value="p2">
+            <label for="timekeeper" class="checkbox-text">TIMEKEEPER</label>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="radio" id="projengineer" name="owner" value="p3">
+            <label for="projengineer" class="checkbox-text">PROJ ENGINEER</label>
+          </td>
+          <td><input type="radio" id="initial_foreman" name="owner" value="p4">
+            <label for="foreman" class="checkbox-text">FOREMAN</label>
+        </tr>
+        <tr>
+          <td><input type="radio" id="architect" name="owner" value="p5">
+            <label for="architect" class="checkbox-text">ARCHITECT</label>
+          </td>
+          <td><input type="radio" id="int_designer_I" name="owner" value="p6">
+            <label for="int_designer" class="checkbox-text">INT. DESIGNER</label>
+          </td>
+        </tr>
+        <tr>
+          <td><input type="radio" id="others_I" name="owner" value="p7">
+            <label for="others" class="checkbox-text">OTHERS: PLS SPECIFY</label>
+          </td>
+          <td>
+            <input type="text" class="othersField" id="owner_field" name="owner_profession" required>
+          </td>
+        </tr>
+      </table>
     </td>
   </tr>
 
@@ -193,26 +289,26 @@
   </tr>
   <tr>
     <td>Oven</td>
-    <td><input type="text" name="width_Oven" class="input" placeholder="" required>
+    <td><input type="text" name="width_Oven" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">WIDTH</label>
     </td>
-    <td><input type="text" name="depth_Oven" class="input" placeholder="" required>
+    <td><input type="text" name="depth_Oven" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">DEPTH</label>
     </td>
-    <td><input type="text" name="height_Oven" class="input" placeholder="" required>
+    <td><input type="text" name="height_Oven" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">HEIGHT</label>
     </td>
   </tr>
   <tr>
     <td>Cooktop</td>
     <td>
-      <input type="text" name="width_Cooktop" class="input" placeholder="" required>
+      <input type="text" name="width_Cooktop" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">WIDTH</label>
     </td>
-    <td><input type="text" name="depth_Cooktop" class="input" placeholder="" required>
+    <td><input type="text" name="depth_Cooktop" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">DEPTH</label>
     </td>
-    <td><input type="text" name="height_Cooktop" class="input" placeholder="" required>
+    <td><input type="text" name="height_Cooktop" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">HEIGHT</label>
     </td>
   </tr>
@@ -250,24 +346,15 @@
             <label for="filter_type" class="checkbox-text">FILTER TYPE</label>
           </td>
           <td>
-            <input type="text" class="othersField" id="rangeHoodType_field" name="rangeHoodType_Field" required>
-          </td>
-        </tr>
-      </table>
-    </td>
-    <td>
-      <table>
-        <tr>
-          <td>
-            <input type="radio" id="nine_9m" name="rangeHoodMeasure" value="m1">
+            <input type="radio" id="nine_9m" name="rangeHoodType" value="r3">
             <label for="nine_9m" class="checkbox-text">900mm</label>
           </td>
           <td>
-            <input type="radio" id="six_6m" name="rangeHoodMeasure" value="m2">
+            <input type="radio" id="six_6m" name="rangeHoodType" value="r4">
             <label for="six_6m" class="checkbox-text">600mm</label>
           </td>
           <td>
-            <input type="text" class="othersField" id="rangeHoodMeasure_field" name="rangeHoodMeasure_Field" required>
+            <input type="text" class="othersField" id="rangeHoodType_field" name="rangeHoodType_Field" required>
           </td>
         </tr>
       </table>
@@ -275,37 +362,37 @@
   </tr>
   <tr>
     <td>Refrigerator</td>
-    <td><input type="text" name="width_Refrigerator" class="input" placeholder="" required>
+    <td><input type="text" name="width_Refrigerator" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">WIDTH</label>
     </td>
-    <td><input type="text" name="depth_Refrigerator" class="input" placeholder="" required>
+    <td><input type="text" name="depth_Refrigerator" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">DEPTH</label>
     </td>
-    <td><input type="text" name="height_Refrigerator" class="input" placeholder="" required>
+    <td><input type="text" name="height_Refrigerator" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">HEIGHT</label>
     </td>
   </tr>
   <tr>
     <td>Sink</td>
-    <td><input type="text" name="width_Sink" class="input" placeholder="" required>
+    <td><input type="text" name="width_Sink" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">WIDTH</label>
     </td>
-    <td><input type="text" name="depth_Sink" class="input" placeholder="" required>
+    <td><input type="text" name="depth_Sink" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">DEPTH</label>
     </td>
-    <td><input type="text" name="height_Sink" class="input" placeholder="" required>
+    <td><input type="text" name="height_Sink" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">HEIGHT</label>
     </td>
   </tr>
   <tr>
     <td>Microwave</td>
-    <td><input type="text" name="width_Microwave" class="input" placeholder="" required>
+    <td><input type="text" name="width_Microwave" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">WIDTH</label>
     </td>
-    <td><input type="text" name="depth_Microwave" class="input" placeholder="" required>
+    <td><input type="text" name="depth_Microwave" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">DEPTH</label>
     </td>
-    <td><input type="text" name="height_Microwave" class="input" placeholder="" required>
+    <td><input type="text" name="height_Microwave" class="input" placeholder="ex. XXmm (unit in MM)" required>
       <label class="checkbox-text">HEIGHT</label>
     </td>
   </tr>
@@ -323,15 +410,18 @@
       <table id="modelDimensions">
         <tr>
           <td>
-            <input type="text" name="model_brand" class="input" placeholder="">
+            <input type="text" name="model_brand" id="model_brand" class="input" placeholder="ex. Dishwasher, Anson">
           </td>
-          <td><input type="text" name="width_model_brand" class="input" placeholder="">
+          <td><input type="text" name="width_model_brand" id="width_model_brand" class="input"
+              placeholder="ex. XXmm (unit in MM)">
             <label class="checkbox-text">WIDTH</label>
           </td>
-          <td><input type="text" name="depth_model_brand" class="input" placeholder="">
+          <td><input type="text" name="depth_model_brand" id="depth_model_brand" class="input"
+              placeholder="ex. XXmm (unit in MM)">
             <label class="checkbox-text">DEPTH</label>
           </td>
-          <td><input type="text" name="height_model_brand" class="input" placeholder="">
+          <td><input type="text" name="height_model_brand" id="height_model_brand" class="input"
+              placeholder="ex. XXmm (unit in MM)">
             <label class="checkbox-text">HEIGHT</label>
           </td>
         </tr>
@@ -345,16 +435,16 @@
   <tr>
     <td>Attachments:</td>
     <td><label>Plan</label>
-      <input type="file" id="plan" name="plan">
+      <input type="file" id="plan" name="plan" onchange="getFile(event)" accept="image/png, image/jpeg" required>
     </td>
-    <td><label for="picture_loc_ceiling">Picture of location and ceilling if with cover</label><input type="file"
-        id="plan" name="plan"></td>
+    <td><label for="picture_loc_ceiling">Picture of location and ceilling if with cove</label><input type="file"
+        id="plan" name="plan" onchange="getFile(event)" accept="image/png, image/jpeg" required></td>
   </tr>
   <tr>
     <td>Submitted by:</td>
     <td><input type="text" name="submittedby" class="input" placeholder="" required></td>
     <td><label for="Date">Date:</label>
-      <input type="date" id="birthday" name="birthday">
+      <input type="date" id="submission_date" name="submission_date">
     </td>
   </tr>
   <tr>
@@ -376,7 +466,7 @@
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -385,10 +475,28 @@
   }
 
   form {
-    background-color: #fff;
-    border-radius: 8px;
+    --input-focus: #2d8cf0;
+    --font-color: #323232;
+    --font-color-sub: #131C31;
+    --bg-color: #fff;
+    --main-color: #323232;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: lightgrey;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    box-shadow: 4px 4px var(--main-color);
+  }
+
+  th {
+    color: var(--font-color);
+    font-weight: 900;
+    font-size: 21px;
+    margin-bottom: 25px;
   }
 
   table {
@@ -397,23 +505,66 @@
   }
 
   td {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    padding: 5px;
+    color: var(--font-color-sub);
+    font-weight: 600;
+    font-size: 18px;
   }
 
-  input {
+  input[type="text"] {
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+  }
+
+  input[type="text"]:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .input::placeholder {
+    color: var(--font-color-sub);
+    opacity: 0.8;
+  }
+
+
+  /*input {
     width: auto;
     padding: 8px;
     box-sizing: border-box;
     margin-bottom: 10px;
-  }
+    width: 250px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: var(--bg-color);
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--font-color);
+    padding: 5px 10px;
+    outline: none;
+  }*/
 
   button {
-    padding: 10px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
+    margin: 5px auto 0 auto;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid var(--main-color);
+    background-color: #93c47d;
+    box-shadow: 4px 4px var(--main-color);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--font-color);
     cursor: pointer;
   }
 
@@ -423,11 +574,21 @@
 
   input[type="checkbox"] {
     margin-right: 10px;
-    transform: scale(1.5);
+    transform: scale(2);
   }
 
   label {
     font-size: 14px;
     font-weight: bold;
+  }
+
+  input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  input[type="radio"]:hover {
+    transform: scale(2);
   }
 </style>

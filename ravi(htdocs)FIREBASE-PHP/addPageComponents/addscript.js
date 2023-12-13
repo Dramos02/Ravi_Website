@@ -1,8 +1,17 @@
-document.addEventListener("DOMContentLoaded", function () {
+const firebaseConfig = {
+  apiKey: "AIzaSyCEzVplNoLJTbgb6Q9UYDweIN6rFCYIBOs",
+  authDomain: "ravi-forms.firebaseapp.com",
+  databaseURL: "https://ravi-forms-default-rtdb.firebaseio.com",
+  projectId: "ravi-forms",
+  storageBucket: "ravi-forms.appspot.com",
+  messagingSenderId: "433936347858",
+  appId: "1:433936347858:web:74d21861294652808cb30b"
+};
 
+document.addEventListener("DOMContentLoaded", function () {
   function professionRadioInput(groupName) {
-    const radioButtons = document.querySelectorAll(`input[type="radio"][name="${groupName}"]`);
-    const othersText = document.getElementById(`${groupName}_field`);
+    var radioButtons = document.querySelectorAll(`input[type="radio"][name="${groupName}"]`);
+    var othersText = document.getElementById(`${groupName}_field`);
 
     if (!othersText) {
       console.error(`Textarea with ID '${groupName}_field' not found.`);
@@ -57,8 +66,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function kitchenRadioInput(groupName) {
-    const radioButtons = document.querySelectorAll(`input[type="radio"][name="${groupName}"]`);
-    const othersText = document.getElementById(`${groupName}_field`);
+    var radioButtons = document.querySelectorAll(`input[type="radio"][name="${groupName}"]`);
+    var othersText = document.getElementById(`${groupName}_field`);
 
     if (!othersText) {
       console.error(`Textarea with ID '${groupName}_field' not found.`);
@@ -109,8 +118,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function typeRadioInput(groupName) {
-    const radioButtons = document.querySelectorAll(`input[type="radio"][name="${groupName}Type"]`);
-    const othersText = document.getElementById(`${groupName}_type`);
+    var radioButtons = document.querySelectorAll(`input[type="radio"][name="${groupName}Type"]`);
+    var othersText = document.getElementById(`${groupName}_type`);
 
     if (!othersText) {
       console.error(`Textarea with ID '${groupName}_field' not found.`);
@@ -143,8 +152,8 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function rangeHoodType(groupName) {
-    const radioButtons = document.querySelectorAll(`input[type="radio"][name="${groupName}"]`);
-    const othersText = document.getElementById(`${groupName}_field`);
+    var radioButtons = document.querySelectorAll(`input[type="radio"][name="${groupName}"]`);
+    var othersText = document.getElementById(`${groupName}_field`);
 
     if (!othersText) {
       console.error(`Textarea with ID '${groupName}_field' not found.`);
@@ -163,10 +172,10 @@ document.addEventListener("DOMContentLoaded", function () {
             case 'r2':
               othersText.value = 'Filter Type';
               break;
-            case 'm1':
+            case 'r3':
               othersText.value = '900mm';
               break;
-            case 'm2':
+            case 'r4':
               othersText.value = '600mm';
               break;
           }
@@ -183,14 +192,40 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function otherModel() {
-    const otherModelCheckbox = document.getElementById('otherModel');
-    const modelDimensionsTable = document.getElementById('modelDimensions');
+    var otherModelCheckbox = document.getElementById('otherModel');
+    var modelDimensionsTable = document.getElementById('modelDimensions');
+
+    var modelBrand = document.getElementById('model_brand');
+    var modelWidth = document.getElementById('width_model_brand');
+    var modelDepth = document.getElementById('depth_model_brand');
+    var modelHeight = document.getElementById('height_model_brand');
+
+    if (modelBrand.value.trim() !== "") {
+      otherModelCheckbox.checked = true;
+      modelDimensionsTable.style.display = 'table';
+      modelBrand.setAttribute('required', '');
+      modelWidth.setAttribute('required', '');
+      modelDepth.setAttribute('required', '');
+      modelHeight.setAttribute('required', '');
+    }
 
     otherModelCheckbox.addEventListener('change', function () {
       if (!otherModelCheckbox.checked) {
         modelDimensionsTable.style.display = 'none';
+        modelBrand.removeAttribute('required');
+        modelWidth.removeAttribute('required');
+        modelDepth.removeAttribute('required');
+        modelHeight.removeAttribute('required');
+        modelBrand.value = '';
+        modelWidth.value = '';
+        modelDepth.value = '';
+        modelHeight.value = '';
       } else {
-        modelDimensionsTable.style.display = 'table'; // Use 'table' for table elements
+        modelDimensionsTable.style.display = 'table';
+        modelBrand.setAttribute('required', '');
+        modelWidth.setAttribute('required', '');
+        modelDepth.setAttribute('required', '');
+        modelHeight.setAttribute('required', '');
       }
     });
   }
@@ -209,7 +244,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   typeRadioInput('range');
   rangeHoodType('rangeHoodType');
-  rangeHoodType('rangeHoodMeasure');
 
   otherModel();
 
