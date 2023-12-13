@@ -39,6 +39,9 @@ body{
     background:#111;
     overflow-x: hidden;
     padding-left: 35rem;
+    background: url('https://i.imgur.com/tgkbZ50.jpeg');
+    background-size: cover;
+    background-position: center;
 }
 
 section{
