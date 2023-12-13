@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="adminpage.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="icon" href="https://i.imgur.com/nMdo4LG.jpg">
+    
 </head>
 <body>
 <header>
@@ -18,9 +19,9 @@
 
     <nav class="navbar">
         <ul>
-            <li><a href="#Account_Details">Account Details</a></li>
-            <li><a href="#">Recent Transactions</a></li>
-            <li><a href="adminlogin.html">Log-Out</a></li>
+            <li><a href="#Account_Details" style="background-color: #E1B847;">Account Details</a></li>
+            <li><a href="#" style="background-color: #E1B847;">Recent Transactions</a></li>
+            <li><a href="adminlogin.html" style="background-color: #E1B847;">Log-Out</a></li>
             <li><p class="end">2023 © RAVI Modular All rights reserved.</p></li>
         </ul>
     </nav>
