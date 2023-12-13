@@ -13,6 +13,10 @@
 <body>
 <header>
 
+    <div class="logo">
+    <img src="https://i.imgur.com/nMdo4LG.jpg" alt="Logo" width="200" height="200">
+    </div>
+
     <div class="user">
         <h3 class="name">ADMIN USER</h3>
     </div>
@@ -30,12 +34,14 @@
 <div id="menu" class="fas fa-bars"></div>
 
 <section class="about" id="Account_Details">
-<h1 class="heading"> Account <span> Details</span></h1>
+<h1 class="heading"> Details</span></h1>
 <?php include('ravi(htdocs)FIREBASE-PHP/index.php');?>
 
-</div>
-
 </section>
+
+<div class="footerWrapper">
+    <?php include("footer.php"); ?>
+</div>
 
 </body>
 </html>
