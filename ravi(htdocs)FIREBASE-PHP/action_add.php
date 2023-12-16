@@ -27,7 +27,7 @@ $raviData = [
     "owner_idprofFee" => $_POST['owner_idprofFee'],
     "owner_profession" => $_POST['owner_profession']
   ],
-  "specifications" =>[
+  "specifications" => [
     "kitchen_field" => $_POST['kitchen_field'], /* Main Kitchen */
     "doorfront" => $_POST['doorfront'],
     "doorfront_Finish" => $_POST['doorfront_Finish'],
@@ -57,7 +57,9 @@ $raviData = [
     "model_brand" => $_POST['model_brand'],
     "width_model_brand" => $_POST['width_model_brand'],
     "depth_model_brand" => $_POST['depth_model_brand'],
-    "height_model_brand" => $_POST['height_model_brand']
+    "height_model_brand" => $_POST['height_model_brand'],
+    "pic_plan_name" => $_POST['pic_plan_name'],
+    "pic_loc_name" => $_POST['pic_loc_name']
   ]
 ];
 
@@ -67,7 +69,8 @@ if ($insert) {
   $_SESSION['status'] = "Inquries submitted, Wait for our call till we Verify you!";
   header('Location: index.php');
 } else {
-  $_SESSION['status'] = "Some Went Wrong!! Check Backend...";
+  $_SESSION['status'] = "Something Went Wrong!! Check Backend...";
   header('Location: index.php');
 }
+
 ?>

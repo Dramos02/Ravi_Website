@@ -39,7 +39,7 @@
             } else if (passwordInput !== "raviadmin123") {
                 alert("Invalid Password");
             } else {
-                window.location.href = "adminpage.php";
+                window.location.href = "ravi(htdocs)FIREBASE-PHP/index.php";
             }
         }
     </script>

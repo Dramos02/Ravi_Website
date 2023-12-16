@@ -11,10 +11,18 @@ $data = json_decode($retrieve, 1);
 
 ?>
 
-<script src="editscript.js"></script>
-<script src="addPageComponents/addscript.js"></script>
+<!-- <link rel="stylesheet" href="addedit.css"> -->
 
-<form method="post" action="action_edit.php">
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+<script src="editscript.js"></script>
+<script src="addscript.js"></script>
+<link rel="icon" href="https://i.imgur.com/nMdo4LG.jpg">
+<title>Ravi Forms</title>
+
+
+
+<form method="post" enctype="multipart/form-data" action="action_edit.php">
   <table>
 
     <!-- Initial Contact Inputs -->
@@ -322,33 +330,37 @@ $data = json_decode($retrieve, 1);
   </tr>
   <tr>
     <td>Oven</td>
-    <td><input type="text" name="width_Oven" class="input" value="<?php echo $data['specifications']['width_Oven'] ?>"
+    <td>
+      <label class="checkbox-text">WIDTH</label><br>
+      <input type="text" name="width_Oven" class="input" value="<?php echo $data['specifications']['width_Oven'] ?>"
         placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">WIDTH</label>
     </td>
-    <td><input type="text" name="depth_Oven" class="input" value="<?php echo $data['specifications']['depth_Oven'] ?>"
-        placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">DEPTH</label>
+    <td>
+      <label class="checkbox-text">DEPTH</label><br>
+      <input type="text" name="depth_Oven" class="input" value="<?php echo $data['specifications']['depth_Oven'] ?>" placeholder="ex. XXmm (unit in MM)" required>
     </td>
-    <td><input type="text" name="height_Oven" class="input" value="<?php echo $data['specifications']['height_Oven'] ?>"
+    <td>
+      <label class="checkbox-text">HEIGHT</label><br>
+      <input type="text" name="height_Oven" class="input" value="<?php echo $data['specifications']['height_Oven'] ?>"
         placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">HEIGHT</label>
     </td>
   </tr>
   <tr>
     <td>Cooktop</td>
     <td>
+      <label class="checkbox-text">WIDTH</label><br>
       <input type="text" name="width_Cooktop" class="input"
         value="<?php echo $data['specifications']['width_Cooktop'] ?>" placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">WIDTH</label>
     </td>
-    <td><input type="text" name="depth_Cooktop" class="input"
+    <td>
+      <label class="checkbox-text">DEPTH</label><br>
+      <input type="text" name="depth_Cooktop" class="input"
         value="<?php echo $data['specifications']['depth_Cooktop'] ?>" placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">DEPTH</label>
     </td>
-    <td><input type="text" name="height_Cooktop" class="input"
+    <td>
+      <label class="checkbox-text">HEIGHT</label><br>
+      <input type="text" name="height_Cooktop" class="input"
         value="<?php echo $data['specifications']['height_Cooktop'] ?>" placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">HEIGHT</label>
     </td>
   </tr>
   <tr>
@@ -403,50 +415,59 @@ $data = json_decode($retrieve, 1);
   </tr>
   <tr>
     <td>Refrigerator</td>
-    <td><input type="text" name="width_Refrigerator" class="input"
+    <td>
+      <label class="checkbox-text">WIDTH</label><br>
+      <input type="text" name="width_Refrigerator" class="input"
         value="<?php echo $data['specifications']['width_Refrigerator'] ?>" placeholder="ex. XXmm (unit in MM)"
         required>
-      <label class="checkbox-text">WIDTH</label>
     </td>
-    <td><input type="text" name="depth_Refrigerator" class="input"
+    <td>
+      <label class="checkbox-text">DEPTH</label><br>
+      <input type="text" name="depth_Refrigerator" class="input"
         value="<?php echo $data['specifications']['depth_Refrigerator'] ?>" placeholder="ex. XXmm (unit in MM)"
         required>
-      <label class="checkbox-text">DEPTH</label>
     </td>
-    <td><input type="text" name="height_Refrigerator" class="input"
+    <td>
+      <label class="checkbox-text">HEIGHT</label><br>
+      <input type="text" name="height_Refrigerator" class="input"
         value="<?php echo $data['specifications']['height_Refrigerator'] ?>" placeholder="ex. XXmm (unit in MM)"
         required>
-      <label class="checkbox-text">HEIGHT</label>
     </td>
   </tr>
   <tr>
     <td>Sink</td>
-    <td><input type="text" name="width_Sink" class="input" value="<?php echo $data['specifications']['width_Sink'] ?>"
+    <td>
+      <label class="checkbox-text">WIDTH</label><br>
+      <input type="text" name="width_Sink" class="input" value="<?php echo $data['specifications']['width_Sink'] ?>"
         placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">WIDTH</label>
     </td>
-    <td><input type="text" name="depth_Sink" class="input" value="<?php echo $data['specifications']['depth_Sink'] ?>"
+    <td>
+      <label class="checkbox-text">DEPTH</label><br>
+      <input type="text" name="depth_Sink" class="input" value="<?php echo $data['specifications']['depth_Sink'] ?>"
         placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">DEPTH</label>
     </td>
-    <td><input type="text" name="height_Sink" class="input" value="<?php echo $data['specifications']['height_Sink'] ?>"
+    <td>
+      <label class="checkbox-text">HEIGHT</label><br>
+      <input type="text" name="height_Sink" class="input" value="<?php echo $data['specifications']['height_Sink'] ?>"
         placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">HEIGHT</label>
     </td>
   </tr>
   <tr>
     <td>Microwave</td>
-    <td><input type="text" name="width_Microwave" class="input"
+    <td>
+      <label class="checkbox-text">WIDTH</label><br>
+      <input type="text" name="width_Microwave" class="input"
         value="<?php echo $data['specifications']['width_Microwave'] ?>" placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">WIDTH</label>
     </td>
-    <td><input type="text" name="depth_Microwave" class="input"
+    <td>
+      <label class="checkbox-text">DEPTH</label><br>
+      <input type="text" name="depth_Microwave" class="input"
         value="<?php echo $data['specifications']['depth_Microwave'] ?>" placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">DEPTH</label>
     </td>
-    <td><input type="text" name="height_Microwave" class="input"
+    <td>
+      <label class="checkbox-text">HEIGHT</label><br>
+      <input type="text" name="height_Microwave" class="input"
         value="<?php echo $data['specifications']['height_Microwave'] ?>" placeholder="ex. XXmm (unit in MM)" required>
-      <label class="checkbox-text">HEIGHT</label>
     </td>
   </tr>
 
@@ -457,26 +478,30 @@ $data = json_decode($retrieve, 1);
   <tr>
     <td>
       <input type="checkbox" id="otherModel" name="otherModel">
-      <label for="otherModel">Model/Brand (OTHER APPLIANCES, PLS SPECIFY)</label>
+      <label for="otherModel">OTHER APPLIANCES (PLS SPECIFY)</label>
     </td>
     <td colspan="5">
       <table id="modelDimensions">
         <tr>
           <td>
+            <label class="checkbox-text">Model, Brand</label><br>
             <input type="text" name="model_brand" id="model_brand" class="input"
               value="<?php echo $data['specifications']['model_brand'] ?>" placeholder="ex. Dishwasher, Anson">
           </td>
-          <td><input type="text" name="width_model_brand" id="width_model_brand" class="input"
+          <td>
+            <label class="checkbox-text">WIDTH</label><br>
+            <input type="text" name="width_model_brand" id="width_model_brand" class="input"
               value="<?php echo $data['specifications']['width_model_brand'] ?>" placeholder="ex. XXmm (unit in MM)">
-            <label class="checkbox-text">WIDTH</label>
           </td>
-          <td><input type="text" name="depth_model_brand" id="depth_model_brand" class="input"
+          <td>
+            <label class="checkbox-text">DEPTH</label><br>
+            <input type="text" name="depth_model_brand" id="depth_model_brand" class="input"
               value="<?php echo $data['specifications']['depth_model_brand'] ?>" placeholder="ex. XXmm (unit in MM)">
-            <label class="checkbox-text">DEPTH</label>
           </td>
-          <td><input type="text" name="height_model_brand" id="height_model_brand" class="input"
+          <td>
+            <label class="checkbox-text">HEIGHT</label><br>
+            <input type="text" name="height_model_brand" id="height_model_brand" class="input"
               value="<?php echo $data['specifications']['height_model_brand'] ?>" placeholder="ex. XXmm (unit in MM)">
-            <label class="checkbox-text">HEIGHT</label>
           </td>
         </tr>
       </table>
@@ -490,14 +515,19 @@ $data = json_decode($retrieve, 1);
         value="<?php echo $data['specifications']['remarks'] ?>">
     </td>
   </tr>
-  <tr>
+  <!-- <tr>
     <td>Attachments:</td>
     <td><label>Plan</label>
-      <input type="file" id="plan" name="plan">
+      <input type="file" id="pic_plan" name="pic_plan" onchange="getPlanFile(event)" accept="image/png, image/jpeg">
+      <input type="text" id="pic_plan_name" name="pic_plan_name"
+        value="<?php echo $data['specifications']['pic_plan_name'] ?>" style="display:none;" required>
     </td>
-    <td><label for="picture_loc_ceiling">Picture of location and ceilling if with cove</label><input type="file"
-        id="plan" name="plan"></td>
-  </tr>
+    <td><label for="picture_loc_ceiling">Picture of location and ceilling if with cove</label>
+      <input type="file" id="pic_loc" name="pic_loc" onchange="getLocFile(event)" accept="image/png, image/jpeg">
+      <input type="text" id="pic_loc_name" name="pic_loc_name"
+        value="<?php echo $data['specifications']['pic_loc_name'] ?>" style="display:none;" required>
+    </td>
+  </tr> -->
   <tr>
     <td>Submitted by:</td>
     <td><input type="text" name="submittedby" class="input" value="<?php echo $data['specifications']['submittedby'] ?>"
@@ -510,6 +540,7 @@ $data = json_decode($retrieve, 1);
   <tr>
     <td>
       <input type="hidden" name="id" value="<?php echo $id ?>">
+      <!-- <button type="submit" onclick="uploadImage()" class="button-confirm">Submit</button> -->
       <button type="submit" class="button-confirm">Submit</button>
     </td>
   </tr>
@@ -572,6 +603,11 @@ $data = json_decode($retrieve, 1);
     color: var(--font-color-sub);
     font-weight: 600;
     font-size: 18px;
+  }
+
+  textarea {
+    width:100%;
+    resize: vertical;
   }
 
   input[type="text"] {

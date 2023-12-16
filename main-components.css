@@ -2,7 +2,9 @@
 @import "slider.css";
 @import "footer.css";
 
-:root {}
+:root {
+
+}
 
 * {
   transition: all 0.5s ease-in-out;
@@ -41,10 +43,6 @@ body::-webkit-scrollbar-button {
 .bodyFlex {
   display: flex;
   flex-flow: column;
-}
-
-.mobileHeaderWrap {
-  display: none;
 }
 
 .headerWrapper {

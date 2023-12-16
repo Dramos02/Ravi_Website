@@ -61,7 +61,9 @@ $raviData = [
     "model_brand" => $_POST['model_brand'],
     "width_model_brand" => $_POST['width_model_brand'],
     "depth_model_brand" => $_POST['depth_model_brand'],
-    "height_model_brand" => $_POST['height_model_brand']
+    "height_model_brand" => $_POST['height_model_brand'],
+    "pic_plan_name" => $_POST['pic_plan_name'],
+    "pic_loc_name" => $_POST['pic_loc_name']
   ]
 ];
 

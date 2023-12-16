@@ -1,61 +1,14 @@
 @import "main-components.css";
+@import "ravi(htdocs)FIREBASE-PHP/addedit.css";
 
-/* START OF FORMS */
-form {
-    width: 90%;
-    max-width: 600px;
-    margin: auto; /* Center the form horizontally */
-    margin-top: 200px; /* Adjust the top margin as needed */
-}
-
-.input-group {
-    margin-bottom: 40px;
-    position: relative;
-}
-
-input,
-textarea {
-    width: 100%; 
-    padding: 10px;
-    outline: 0;
-    border: 1px solid #fff;
-    color: #fff;
-    background: transparent;
-    font-size: 15px;
-}
-
-label {
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    padding: 10px;
-    color: #fff;
-    cursor: text;
-    transition: 0.2s;
-}
-
-button {
-    padding: 10px 0;
-    color: #fff;
-    outline: none;
-    background: transparent;
-    border: 1px solid #fff;
-    width: 104%;
-    cursor: pointer;
-}
-
-input:focus~label {
-    top: -35px;
-    font-size: 14px;
-}
-
-input:focus~label,
-input:valid~label,
-textarea:focus~label,
-textarea:valid~label {
-    top: -35px;
-    font-size: 14px;
+.contentWrapper{
+  display:flex;
+  flex-flow: column;
+  margin:25px;
+  background-color:rgba(15, 15, 15, .6);
+  border: 2px solid rgba(225, 184, 71, .5);
+  backdrop-filter: blur(5px);
+  border-radius: 25px;
 }
 
 .row {
@@ -67,4 +20,3 @@ textarea:valid~label {
 .row .input-group {
     flex-basis: 45%;
 }
-/* END OF FORMS */

@@ -1,140 +1,164 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
 
-:root{
-    --yellow:#5d6263;
-    --bg-clr: #ef4d61;
-    --white: rgb(231, 243, 243);
-    --text-primary-clr: #24f2f9;
-    --text-secondary-clr: #0e0d0d;
-   
+:root {
+  --yellow: #5d6263;
+  --bg-clr: #ef4d61;
+  --white: rgb(231, 243, 243);
+  --text-primary-clr: #24f2f9;
+  --text-secondary-clr: #0e0d0d;
+
 }
 
-*{
-    font-family: 'Nunito', sans-serif;
-    margin:0; padding:0;
-    box-sizing: border-box;
-    text-decoration: none;
-    outline: none; border:none;
-    transition: all .2s linear;
+* {
+  font-family: 'Nunito', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  transition: all .2s linear;
 }
 
-html{
-    font-size: 62.5%;
-    overflow-x: hidden;
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
 }
 
-html::-webkit-scrollbar{
-    width:1.4rem;
+html::-webkit-scrollbar {
+  width: 1.4rem;
 }
 
-html::-webkit-scrollbar-track{
-    background:#222;
+html::-webkit-scrollbar-track {
+  background: #222;
 }
 
-html::-webkit-scrollbar-thumb{
-    background:var(--yellow);
+html::-webkit-scrollbar-thumb {
+  background: var(--yellow);
 }
 
-body{
-    background:#111;
-    overflow-x: hidden;
-    padding-left: 35rem;
-    background: url('https://i.imgur.com/tgkbZ50.jpeg');
-    background-size: cover;
-    background-position: center;
+body {
+  display: flex;
+  flex-flow: column;
+  background: #111;
+  overflow-x: hidden;
+  background: url('https://i.imgur.com/tgkbZ50.jpeg');
+  background-size: cover;
+  background-position: center;
+  height:100%;
+}
+
+.bodyFlex {
+  display: flex;
+  flex-flow: column;
+  height:100%;
+}
+
+.adminLayout {
+  display: flex;
+  flex-flow: row;
+}
+
+.contentWrapper {
+  overflow: auto;
+  /* width: fit-content; */
 }
 
 .about {
-    flex: 1;
-}   
+  /* flex: 1; */
+}
 
 .footerWrapper {
-    text-align: center;
-    padding: 20px;
-    background-color: #222121;
-    color: #eedb5e;
+  /* flex: 0 1 auto; */
+  text-align: center;
+  padding: 20px;
+  background-color: #222121;
+  color: #eedb5e;
 }
 
 
 table {
-    background-color: rgba(230, 219, 126, 0.5);
+  background-color: rgba(230, 219, 126, 0.5);
 }
 
-th, td {
-    font-family: 'Arial', sans-serif;
+th,
+td {
+  font-family: 'Arial', sans-serif;
 }
 
-section{
-    min-height: 100vh;
-    padding:1rem;
+section {
+  /* min-height: 100vh; */
+  padding: 1rem;
 }
 
-.heading{
-    text-align: center;
-    margin:0 6rem;
-    font-size: 4rem;
-    padding:1rem;
-    border-bottom: .1rem solid #fff4;
-    color:#ffffff;
+.heading {
+  text-align: center;
+  margin: 0 6rem;
+  font-size: 4rem;
+  padding: 1rem;
+  border-bottom: .1rem solid #fff4;
+  color: #ffffff;
 }
 
-header{
-    position: fixed;
-    top:0; left:0;
-    z-index: 1000;
-    height:100%;
-    width:40rem;
-    background:#1a1a1a;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-flow: column;
-    text-align: center;
+header {
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 100%;
+  width: 40rem;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  text-align: center;
 }
 
-header .user .name{
-    font-size: 3.5rem;
-    color:#fff;
-}
-
-
-header .navbar{
-    width:100%;
-}
-
-header .navbar ul{
-    list-style: none;
-    padding:1rem 3rem;
+header .user .name {
+  font-size: 3.5rem;
+  color: #fff;
 }
 
 
-header .navbar ul li a{
-    display: block;
-    padding:1rem;
-    margin:1.5rem 0;
-    background:#333;
-    color:#fff;
-    font-size: 2rem;
-    border-radius: 5rem;
+header .navbar {
+  width: 100%;
 }
 
-#menu{
-    position: fixed;
-    top:2rem; right:2rem;
-    background:#333;
-    color:#fff;
-    cursor: pointer;
-    font-size: 2.5rem;
-    padding:1rem 1.5rem;
-    z-index: 1000;
-    display: none;
+header .navbar ul {
+  list-style: none;
+  padding: 1rem 3rem;
 }
 
-.end{ 
-    color:#fff;
-	text-align: center;
-	margin-top: 10px;
-	padding-top: 5px;
-	padding-bottom: 10px;
-	
+
+header .navbar ul li a {
+  display: block;
+  padding: 1rem;
+  /* margin:1.5rem 0; */
+  background: #333;
+  color: #fff;
+  font-size: 2rem;
+  border-radius: 5rem;
+}
+
+#menu {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  background: #333;
+  color: #fff;
+  cursor: pointer;
+  font-size: 2.5rem;
+  padding: 1rem 1.5rem;
+  z-index: 1000;
+  display: none;
+}
+
+.end {
+  color: #fff;
+  text-align: center;
+  margin-top: 10px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+
 }
